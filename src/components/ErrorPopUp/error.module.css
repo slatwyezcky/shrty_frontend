@@ -1,0 +1,16 @@
+.pop_up {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem;
+
+  background: rgb(218, 104, 104);
+  color: #dfdfdf;
+  font-size: 14px;
+  border-radius: 1rem;
+}

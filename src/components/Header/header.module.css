@@ -1,0 +1,28 @@
+.container {
+  width: 600px;
+  margin-top: 4rem;
+}
+
+.header {
+  position: relative;
+  width: fit-content;
+
+  color: #fefefe;
+
+  font-size: 4rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 1000;
+  letter-spacing: 0.15rem;
+  line-height: 6rem;
+}
+
+.icon {
+  position: absolute;
+  bottom: 1rem;
+  right: -1rem;
+}
+
+.description {
+  line-height: 1.5rem;
+  color: #cccccc;
+}

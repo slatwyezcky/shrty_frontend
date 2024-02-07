@@ -1,0 +1,41 @@
+.form {
+  margin-top: 2rem;
+}
+
+.input {
+  padding: 0.5rem;
+  margin-bottom: 0.2rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  color: #333333;
+  width: 70%;
+  margin-right: 0.2rem;
+}
+
+.block {
+  display: block;
+  width: 100%;
+}
+
+.btn {
+  padding: 0.5rem;
+  margin-bottom: 0.2rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  width: calc(30% - 0.2rem);
+  background: #666666;
+  color: #fefefe;
+  cursor: pointer;
+  border: 1px solid #666666;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  border: 1px solid #888888;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}

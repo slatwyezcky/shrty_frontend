@@ -1,0 +1,20 @@
+.redirect {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #fefefe;
+  font-size: 4rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 1000;
+  letter-spacing: 0.15rem;
+  line-height: 6rem;
+}
+
+.loader {
+  width: 150px;
+  height: 150px;
+}

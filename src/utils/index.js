@@ -1,0 +1,17 @@
+export function checkURL(url) {
+  if (!url) return false;
+  const regexp = new RegExp(
+    // prettier-ignore
+    '(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?([a-zA-Z0-9_]{1,})(\.[a-zA-Z0-9_]{1,}){1,2}((\/[a-zA-Z0-9#$%&_?=\/]{1,})*)?(.([a-zA-Z]){1,})?'
+  );
+  return regexp.test(url);
+}
+
+export function checkAlias(alias) {
+  console.log(alias);
+
+  if (!alias) return true;
+  const regexp = new RegExp('^[a-zA-Z0-9]*$');
+  console.log(regexp.test(alias));
+  return regexp.test(alias);
+}
