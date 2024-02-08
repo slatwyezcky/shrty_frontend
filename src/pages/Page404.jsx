@@ -1,4 +1,4 @@
-import { NotFound } from '../components/NotFound';
+import { NotFound } from '../components';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const Page404 = () => {

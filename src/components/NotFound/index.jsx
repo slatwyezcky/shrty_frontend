@@ -2,7 +2,7 @@ import styles from './notfound.module.css';
 import image from '../../assets/images/404.png';
 import { useNavigate } from 'react-router-dom';
 
-export const NotFound = () => {
+export default function NotFound() {
   const navigate = useNavigate();
 
   return (
@@ -20,4 +20,4 @@ export const NotFound = () => {
       </div>
     </div>
   );
-};
+}

@@ -64,13 +64,16 @@ const LinkInfo = () => {
               </button>
               <button
                 className={styles.btn}
-                onFocus={() => setShowShareModal(true)}
+                // onFocus={() => setShowShareModal(true)}
+                onClick={() => setShowShareModal((prev) => !prev)}
                 onBlur={() => setShowShareModal(false)}
               >
                 <FiShare2 size={15} />
               </button>
               <AnimatePresence>
-                {showShareModal && <ShareModal />}
+                {showShareModal && (
+                  <ShareModal link={`https://shrty.me/${link}`} />
+                )}
               </AnimatePresence>
             </div>
           </div>

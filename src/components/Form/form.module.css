@@ -39,3 +39,15 @@
 .btn:active {
   transform: scale(0.98);
 }
+
+@media screen and (max-width: 600px) {
+  .form {
+    margin: 1rem;
+  }
+  .input {
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+  }
+}

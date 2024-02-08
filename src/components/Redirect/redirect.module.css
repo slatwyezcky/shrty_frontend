@@ -18,3 +18,18 @@
   width: 150px;
   height: 150px;
 }
+
+@media screen and (max-width: 600px) {
+  .redirect {
+    color: #fefefe;
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 1000;
+    letter-spacing: 0.15rem;
+    line-height: 3rem;
+  }
+  .loader {
+    width: 100px;
+    height: 100px;
+  }
+}

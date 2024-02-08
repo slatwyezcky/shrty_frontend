@@ -23,19 +23,19 @@ export default function ShareModal({ link }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <EmailShareButton url={`https://shrty.me/${link}`}>
+      <EmailShareButton url={link}>
         <EmailIcon size={32} round={true} />
       </EmailShareButton>
-      <FacebookShareButton url={`https://shrty.me/${link}`}>
+      <FacebookShareButton url={link}>
         <FacebookIcon size={32} round={true} />
       </FacebookShareButton>
-      <TelegramShareButton url={`https://shrty.me/${link}`}>
+      <TelegramShareButton url={link}>
         <TelegramIcon size={32} round={true} />
       </TelegramShareButton>
-      <TwitterShareButton url={`https://shrty.me/${link}`}>
+      <TwitterShareButton url={link}>
         <TwitterIcon size={32} round={true} />
       </TwitterShareButton>
-      <WhatsappShareButton url={`https://shrty.me/${link}`}>
+      <WhatsappShareButton url={link}>
         <WhatsappIcon size={32} round={true} />
       </WhatsappShareButton>
     </motion.div>

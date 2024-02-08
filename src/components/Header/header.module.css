@@ -26,3 +26,10 @@
   line-height: 1.5rem;
   color: #cccccc;
 }
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 1rem;
+    width: calc(100dvw - 2rem);
+  }
+}

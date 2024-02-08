@@ -3,25 +3,32 @@ import styles from './form.module.css';
 import axios from 'axios';
 import useStore from '../../store';
 import { checkAlias, checkURL } from '../../utils';
+import loader from '../../assets/images/loader.svg';
 
 const Form = () => {
   const [url, setUrl] = useState('');
   const [alias, setAlias] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const setLink = useStore((state) => state.setLink);
   const setError = useStore((state) => state.setError);
 
   async function handleSubmit(e) {
+    setLoading(true);
+    setLink(null);
+    setError(null);
     e.preventDefault();
     if (!checkURL(url)) {
       setError('You should provide correct URL');
       setTimeout(() => setError(null), 3000);
+      setLoading(false);
       return;
     }
     if (!checkAlias(alias)) {
       console.log(checkAlias(alias));
       setError('Alias should consist only of english letters and digits');
       setTimeout(() => setError(null), 3000);
+      setLoading(false);
       return;
     }
     try {
@@ -30,7 +37,9 @@ const Form = () => {
         alias,
       });
       setLink(data.alias);
+      setLoading(false);
     } catch (error) {
+      setLoading(false);
       switch (error?.response?.status) {
         case 409:
           setError('Sorry! Looks like this alias is already taken.');
@@ -59,7 +68,15 @@ const Form = () => {
         value={alias}
         onChange={(e) => setAlias(e.target.value)}
       />
-      <button className={styles.btn}>make it shørt</button>
+      <button className={styles.btn} disabled={loading}>
+        {loading ? (
+          <>
+            <img src={loader} alt="Loading" width={15} height={15} />
+          </>
+        ) : (
+          'make it shørt'
+        )}
+      </button>
     </form>
   );
 };

@@ -17,7 +17,6 @@ export default function RedirectPage() {
       const {
         data: { url },
       } = await axios.get(`${import.meta.env.VITE_API_URL}/${alias}`);
-      console.log(url);
       window.location.replace(url);
     } catch (error) {
       switch (error?.response?.status) {
