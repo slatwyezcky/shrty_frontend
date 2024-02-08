@@ -45,6 +45,13 @@ const Form = () => {
           setError('Sorry! Looks like this alias is already taken.');
           setTimeout(() => setError(null), 3000);
           break;
+        case 401:
+          setError(
+            error?.response?.data?.message ||
+              'Please, provide correct url and alias.'
+          );
+          setTimeout(() => setError(null), 3000);
+          break;
         default:
           setError('Sorry! Looks like server is not responding.');
           setTimeout(() => setError(null), 3000);
